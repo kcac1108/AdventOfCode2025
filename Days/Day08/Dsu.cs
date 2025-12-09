@@ -15,7 +15,7 @@ public class Dsu
     public int Find(int i)
     {
         if (_parent[i] != i)
-            _parent[i] = Find(_parent[i]); // Path compression
+            _parent[i] = Find(_parent[i]);
         return _parent[i];
     }
 
@@ -28,8 +28,8 @@ public class Dsu
         {
             _parent[rootA] = rootB;
             ComponentCount--;
-            return true; // A merge happened
+            return true;
         }
-        return false; // Already connected
+        return false;
     }
 }
